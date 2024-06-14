@@ -1,11 +1,12 @@
-// src/components/Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = ({ onLogin }) => {
   const [nomeUsuario, setNomeUsuario] = useState('');
   const [senha, setSenha] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +14,7 @@ const Login = ({ onLogin }) => {
       .then(response => {
         if (response.data) {
           onLogin(response.data);
-          window.location.href = '/';
+          navigate('/');
         } else {
           alert('Credenciais inválidas');
         }
