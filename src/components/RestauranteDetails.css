@@ -25,10 +25,12 @@
   display: flex;
   width: 90%;
   height: 50%;
+  margin-left: 15px;
 }
 
 .fotoPrincipal{
     width: 50%;
+    border-radius: 10px;
   }
 
 .fotos{
@@ -42,11 +44,14 @@
   width: 48%;
   height: 49.8%;
   border: 1px solid white;
+  border-radius: 10px;
 }
 
 .containerDetails{
   margin-top: 20px;
+  margin-bottom: 20px;
   width: 90%;
+  height: 280px;
   display: flex;
   justify-content: space-around;
 }
@@ -55,7 +60,7 @@
   border: 1px solid black;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.438);
   border-radius: 20px;
-  width: 40%;
+  width: 35%;
   padding: 10px;
 }
 
@@ -76,10 +81,112 @@
   width: 90%;
   display: flex;
   padding: 10px;
-  justify-content: space-around;
 }
 
 .totalA{
   font-size: 0.7em;
   color: gray;
+}
+
+.newReviewContainer {
+  width: 30%;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.438);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.newReview{ 
+  font-size: 1.13em;
+  resize: none;
+  width: 90%;
+  height: 30%;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.star-rating {
+  display: inline-block;
+  margin: 0px;
+  direction: rtl; /* Direção da direita para a esquerda */
+}
+
+.star {
+  font-size: 2em;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s; /* Transição suave para a mudança de cor */
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: gold; /* Cor ao passar o mouse */
+}
+
+.subtitle{
+  font-size: 0.8em;
+  width: 50%;
+  color: rgb(146, 145, 145);
+  position: relative;
+  left: 140px;
+  top: -15px;
+}
+
+.submitReview{
+  border: 1px solid rgb(61, 61, 61);
+  background-color: #f0e4c7;
+  position: relative;
+  left: 225px;
+  font-size: 1em;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 17px;
+}
+
+.submitReview:hover{
+  background-color: rgb(18, 143, 143);
+}
+
+.textReview{
+  width: 70%;
+  margin-left: 10px;
+}
+ 
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(116, 116, 116, 0.582);
+  z-index: 10;
+}
+
+.modal-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(238, 238, 238);
+  border-radius: 30px;
+  padding: 10px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px rgb(92, 91, 91);
+}
+
+.modal-content > h2 {
+  color: green;
+}
+
+.modal-content > button {
+  position: absolute;
+  top: 5%;
+  left: 93%;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 360px;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-weight: bold;
 }
