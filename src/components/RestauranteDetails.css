@@ -1,7 +1,85 @@
 /* src/components/RestauranteDetails.css */
 .restaurante-details {
-    padding: 20px;
-    border: 1px solid #ddd;
+    box-sizing: border-box;
+    width: 100%;
     border-radius: 5px;
+    overflow: auto;
   }
   
+.headerDetails{
+  padding: 10px;
+  width: 90%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.headerName{
+  margin: 0;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerFotos{
+  display: flex;
+  width: 90%;
+  height: 50%;
+}
+
+.fotoPrincipal{
+    width: 50%;
+  }
+
+.fotos{
+    width: 49%;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.fotoSecundaria{
+  width: 48%;
+  height: 49.8%;
+  border: 1px solid white;
+}
+
+.containerDetails{
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.avaliacao{
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.438);
+  border-radius: 20px;
+  width: 40%;
+  padding: 10px;
+}
+
+.details{
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.438);
+  border-radius: 20px;
+  width: 20%;
+  text-align: center;
+}
+
+.fotoPerfil{
+  margin: 10px;
+  border: 2px solid rgb(75, 75, 75);
+}
+
+.containerFoto{
+  width: 90%;
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.totalA{
+  font-size: 0.7em;
+  color: gray;
+}

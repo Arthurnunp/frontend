@@ -1,5 +1,4 @@
-// src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -11,7 +10,10 @@ import './App.css';
 
 const App = () => {
   const [filter, setFilter] = useState(null);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('user');
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
 
   const handleFilterChange = (value) => {
     setFilter(value);
@@ -19,11 +21,17 @@ const App = () => {
 
   const handleLogin = (user) => {
     setUser(user);
+    localStorage.setItem('user', JSON.stringify(user));
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem('user');
   };
 
   return (
     <Router>
-      <Header user={user} />
+      <Header user={user} onLogout={handleLogout} />
       <div className="main">
         <Sidebar onFilter={handleFilterChange} />
         <Routes>

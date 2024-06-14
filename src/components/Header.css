@@ -4,8 +4,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #69a882;
     color: white;
+    height: 10vh;
   }
   
   .header h1 {
@@ -20,4 +21,39 @@
     color: white;
     text-decoration: none;
   }
+
+  .logo{
+    width: 50%;
+    margin-right: 10%;
+  }
+
+  .nameContainer{
+    display: flex;
+    width: 10%;
+    align-items: center;
+  }
+
+  .locationContainer{
+    display: flex;
+    width: 20%;
+    align-items: center;
+  }
+
+  .pin{
+    margin-right: 7%;
+    width: 8%;
+  }
+
+  .header .user-menu .logout-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #69a882;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
+  .header .user-menu .logout-button:hover {
+    background-color: #538567b4;
+  }

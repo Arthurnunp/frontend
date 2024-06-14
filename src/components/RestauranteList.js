@@ -21,7 +21,8 @@ const RestauranteList = ({ filter }) => {
       {filteredRestaurantes.map(restaurante => (
         <div key={restaurante.id} className="restaurante">
           <h3>{restaurante.nome}</h3>
-          <p>{restaurante.estrelas} estrelas</p>
+          <img className='foto' src={restaurante.foto}/>
+          <p>{Array.from({ length: restaurante.estrelas }, () => '⭐️').join('')}</p>
           <p>{restaurante.faixaPreco}</p>
           <button onClick={() => window.location.href = `/restaurantes/${restaurante.id}`}>Ver Detalhes</button>
         </div>
