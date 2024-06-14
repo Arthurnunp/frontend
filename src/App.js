@@ -36,7 +36,7 @@ const App = () => {
         <Sidebar onFilter={handleFilterChange} />
         <Routes>
           <Route path="/" element={<RestauranteList filter={filter} />} />
-          <Route path="/restaurantes/:id" element={<RestauranteDetails />} />
+          <Route path="/restaurantes/:id" element={<RestauranteDetails user={user}/>} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/register" element={<Register />} />
         </Routes>

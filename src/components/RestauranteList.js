@@ -24,7 +24,7 @@ const RestauranteList = ({ filter }) => {
           <img className='foto' src={restaurante.foto}/>
           <p>{Array.from({ length: restaurante.estrelas }, () => '⭐️').join('')}</p>
           <p>{restaurante.faixaPreco}</p>
-          <button onClick={() => window.location.href = `/restaurantes/${restaurante.id}`}>Ver Detalhes</button>
+          <button className="detailsButton" onClick={() => window.location.href = `/restaurantes/${restaurante.id}`}>Ver Detalhes</button>
         </div>
       ))}
     </div>
